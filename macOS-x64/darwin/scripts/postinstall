@@ -16,7 +16,9 @@ chmod -R 755 .
 
 #Add application shortcut to /usr/local/bin
 rm -f /usr/local/bin/__PRODUCT__-__VERSION__
+rm -rf /Applications/Lacap.app
 ln -s ${PRODUCT_HOME}/${APPLICATION_FILE_PATH} /usr/local/bin/__PRODUCT__-__VERSION__
+cp -rf ${PRODUCT_HOME}/Lacap.app /Applications
 cd ${PRODUCT_HOME}
 ./install.sh
 echo "Post installation process finished"

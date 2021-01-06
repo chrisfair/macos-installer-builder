@@ -4,10 +4,11 @@
 # work on most distros.   If you use arch it is already in the user
 # repos.
 cd ~/go/src/gitlab.com/chrisfair/latin-catholic-prayers
+wails update
 wails build -f
 
 INSTALLER_DIR=/Users/christopher/Projects/macos-installer-builder/macOS-x64/application
-APP_DIR=/Users/christopher/Projects/macos-installer-builder/macOS-x64/application/Lacap.app/Contents
+APP_DIR=/Users/christopher/Projects/macos-installer-builder/macOS-x64/application/Lacap.app/Contents/MacOS
 PRAYERS=$INSTALLER_DIR/Prayers
 HELP_FILES=$INSTALLER_DIR/HelpFiles
 SOUND_FILES=$INSTALLER_DIR/Sounds
@@ -15,7 +16,7 @@ SOUND_FILES=$INSTALLER_DIR/Sounds
 rm $INSTALLER_DIR/lacap
 cp ./build/latin-catholic-prayers $INSTALLER_DIR/lacap
 rm $APP_DIR/Lacap
-cp ./build/latin-catholic-prayers $APP_DIR
+cp ./build/latin-catholic-prayers $APP_DIR/Lacap
 
 rsync -avzp ./Prayers/ ${PRAYERS} 
 rsync -avzp ./HelpFiles/ ${HELP_FILES} 

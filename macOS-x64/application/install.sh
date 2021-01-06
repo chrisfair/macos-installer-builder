@@ -27,3 +27,4 @@ fi
 sudo rsync -avzp ./Prayers/ ${PRAYERS} 
 sudo rsync -avzp ./HelpFiles/ ${HELP_FILES} 
 sudo rsync -avzp ./Sounds/ ${SOUND_FILES} 
+
